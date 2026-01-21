@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Goluu ❤️</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff6a88, #ff99ac);
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: white;
+}
+
+.container {
+    background: rgba(0,0,0,0.45);
+    padding: 25px;
+    border-radius: 20px;
+    max-width: 380px;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(255,255,255,0.3);
+}
+
+h1 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.name {
+    color: #ffd700;
+}
+
+img {
+    width: 200px;
+    border-radius: 15px;
+    margin: 15px 0;
+    box-shadow: 0 0 20px rgba(255,255,255,0.7);
+}
+
+button {
+    background: white;
+    color: #ff4f7a;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.secret {
+    display: none;
+    margin-top: 15px;
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: left;
+
+    max-height: 300px;        /* IMPORTANT */
+    overflow-y: auto;         /* SCROLL ENABLE */
+    padding-right: 8px;
+}
+
+/* Smooth scrollbar (optional, looks classy) */
+.secret::-webkit-scrollbar {
+    width: 5px;
+}
+.secret::-webkit-scrollbar-thumb {
+    background: #ff9ab3;
+    border-radius: 10px;
+}
+
+/* Floating hearts */
+.heart {
+    position: absolute;
+    color: rgba(255,255,255,0.9);
+    animation: float 6s linear infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh); opacity: 1; }
+    100% { transform: translateY(-10vh); opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<audio autoplay loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+    <h1>🎂 Happy Birthday <br>
+        <span class="name">Goluu (Mara Dikra) ❤️</span>
+    </h1>
+
+    <img src="photo.jpg" alt="Goluu">
+
+    <p>
+        Aaj no divas special chhe ✨<br>
+        Kem ke mari cutypia no birthday chhe 😘
+    </p>
+
+    <button onclick="showSecret()">Tap for Secret 💌</button>
+
+    <div class="secret" id="secret">
+        Ooooooooooooo 💖<br><br>
+
+        Mara dikra <b>goludaaa</b><br>
+        Mithudaa 🤍 Swetudaaaa 😘<br>
+        Paduuu bheshhhhh 😜<br><br>
+
+        Wish you mane many happy return of tha dayyyy 🥳❤️<br>
+        Happiest birthday babuuuuuu ❤️<br><br>
+
+        Mast enjoy kar ane aa tara birthday thi laine
+        mara birthday sudhi apde khud mehnat karvnu hai
+        ane inter clear karvnu hai dika 🥳<br><br>
+
+        Jaldi jaldi inter clear kar ane apde
+        <b>“CA FINALIST”</b> baniye ✨<br><br>
+
+        Thank you bchaa avdo sath devaa mate,
+        everything share karvaa mate,
+        ane atlo trust karva mate 🥺<br><br>
+
+        Har vakte tari sathe j chu ane rhiss 😅
+        ane tane b rehvu j padse kai dau khotu
+        hosiyari to karje j nai 😂<br><br>
+
+        Words ocha padse tara mate,
+        avi cho mari cutypia ❤️<br><br>
+
+        Havee tarif ma hava ma na udje,
+        exam clear karsu pachi
+        apde bane uddsu 😂✈️<br><br>
+
+        Mara birthday ma yad rakhje,
+        apde pass thaine celebrate 🥳 karvnau chhe,
+        nahi to have mara birthday naa malasu 🤗<br><br>
+
+        God blessed you with lots of happiness
+        (ato joke hu chu j 😜)<br><br>
+
+        Jaldi jaldi halo havee mehnat karo ane
+        <b>CA DEEP AND DIXITA</b> baniye 🌹❤️<br><br>
+
+        See you babuu 😍<br>
+        Jaldi jaldi clear karine maliyee,
+        mast tane jovi hai mari mithuduu,
+        mari baby mari sonaa 😜
+    </div>
+</div>
+
+<script>
+function showSecret() {
+    document.getElementById("secret").style.display = "block";
+}
+
+setInterval(() => {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 20 + 15 + "px";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 6000);
+}, 300);
+</script>
+
+</body>
+</html>
